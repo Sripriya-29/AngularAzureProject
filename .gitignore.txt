@@ -1,0 +1,16 @@
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+.settings/
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+.DS_Store
