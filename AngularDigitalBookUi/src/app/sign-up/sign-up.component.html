@@ -1,0 +1,64 @@
+<br><br>
+<div class="container" >
+    <div class="container">
+        <br>
+       <form #form="ngForm"(ngSubmit)="onSubmit()" ><!-- -->
+        <br>
+        <div class="form-group">
+        <th>    <label for="">User Name</label> &nbsp; &nbsp;
+          <input type="text" name="userName" [(ngModel)]="user.userName"></th>
+        </div>
+        <br>
+        <div class="form-group">
+          <th>     <label for="">EmailId</label> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" name="EmailId" [(ngModel)]="user.emailId"></th>
+        </div>
+        <br>
+        <div>
+          <th>    <label for="">Password</label> &nbsp; &nbsp;&nbsp;&nbsp;
+            <input type="password" name="password" [(ngModel)]="user.password"></th>
+          </div>
+          <br>
+          <div>
+            <th>    <label for="">FirstName</label> &nbsp; &nbsp;
+            <input type="text" name="firstName" [(ngModel)]="user.firstName"></th>
+          </div>
+          <br>
+          <div>
+            <th>     <label for="">LastName</label> &nbsp; &nbsp;
+            <input type="text" name="lastName" [(ngModel)]="user.lastName"></th>
+          </div>
+          <br>
+          <div >
+            <th>      <input type="radio" value="Author" name="role" ngModel (change)="onAuthorRoleid()"> Author</th>
+            <th>       <input type="radio" value="Reader" name="role" ngModel (change)="onUserRoleid()"> Reader</th>
+          </div>
+          <br>
+        <div class="form-group">
+          <th>    <button (onclick)="onSubmit()">Register </button></th>
+        </div>
+
+      </form>
+      <!-- <div container>
+        <div class="container" > *ngIf="books.length>0;els" -->
+             <!-- <table class="table table-bordered">
+                 <thead>
+                     <th
+                     >Book Name</th>
+                     <th>Price</th>
+                     <th>Proceed to Buy</th>
+                 </thead>
+                 <tbody *ngFor="let book of books" >
+                     <tr>
+                         <td>{{ book.bookName }}</td>
+                         <td>{{ book.price }}</td>
+                         <td>
+                         
+                         <button class="Button" type="submit">Buy<i class="ffa fa-cart-plus"></i></button>
+                         </td>
+                     </tr>
+                 </tbody>
+             </table> -->
+         </div>
+    
+    </div>

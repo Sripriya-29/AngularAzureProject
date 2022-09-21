@@ -1,0 +1,23 @@
+<br>
+<div class="books-container" >
+  <div class="books-form">
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="">Email ID</label>&nbsp;
+        <input type="email" name="emailID" [(ngModel)]="objpurchase.EmailId" (focusout)="onFocusOutEvent($event)">
+      </div>
+      <br>
+      <div class="form-group">
+        <button class="btn btn-success">Buy</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="books-grid" [ngStyle]="{'display':display}">
+    <h3>Purchased Book History</h3>
+  <div class="book-row" *ngFor="let book of bookHistoryList">
+    <div class="book-row-details" >
+      <span>{{ book.bookName }}</span>
+    </div>
+  </div>
+</div>

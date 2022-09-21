@@ -1,0 +1,25 @@
+.myTable {
+    border: solid 1px #2ec0c0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+    }
+    .myTable thead th {
+    background-color: #18dddd;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+    }
+    .myTable tbody td {
+    border: solid 1px #DDEEEE;
+    background-color: #ddddc7de;
+    color:darkblue;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+    }
+    .myTable-vertical tbody td {
+    border-top: none;
+    border-bottom: none;
+    }

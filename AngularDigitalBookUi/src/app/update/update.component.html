@@ -1,0 +1,35 @@
+<div class="container" style="padding-top:40px;">  
+    <div class="row">  
+      <div class="col-md-6 mx-auto">  
+        <div class="card mx-4">  
+          <div *ngFor="let book of books" class="card-body p-4">  
+            <form name="form" (ngSubmit)="Update(book)" #f="ngForm">   
+              <h1 style="text-align:center">Create Book</h1>  
+              <div class="input-group mb-3">  
+                <input type="text" name="bookName" [(ngModel)]="book.bookName" class="form-control" placeholder="BookName" required>  
+              </div>  
+              <div class="input-group mb-3">  
+                <input type="text" name="Price" [(ngModel)]="book.price" class="form-control" placeholder="Price" required>  
+              </div>  
+              <div class="input-group mb-3">  
+                <input type="text" name="Publisher" [(ngModel)]="book.publisher" class="form-control" placeholder="Publisher" required>  
+              </div> 
+              <div class="input-group mb-4"> 
+              <select name="dropdownOption" [(ngModel)]="book.categoryId"  class='form-control'>
+                <option value="1">Fiction</option>
+                <option value="2">Comic</option>
+                </select>
+              </div>
+              <div class="input-group mb-4"> 
+                <select name="dropdownOption" [(ngModel)]="book.active"  class='form-control'>
+                  <option value="1">unblock</option>
+                  <option value="0">block</option>
+                  </select>
+                </div>
+              <button type="submit" class="btn btn-block btn-success">Update</button>  
+            </form>  
+          </div>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  

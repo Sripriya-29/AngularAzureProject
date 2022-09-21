@@ -1,0 +1,77 @@
+
+<br><br>
+<div class=" books-container" style="text-align:center;">
+    <div class=" books-form">
+      <form #form="ngForm"  (ngSubmit)="onSubmit()" >
+       
+        <div class="form-group">
+         <th> <label for="">Title</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;
+          <input type="text" name="BookName" [(ngModel)]='book.bookName' />
+        </th>
+        </div>
+        <br>
+        <div class="form-group">
+          <th>
+          <label for="">Author</label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" name="UserName" [(ngModel)]='user.userName'/></th>
+        </div> <br>
+        <div class="form-group">
+          <div>
+            <th>
+            <label for="">Publisher</label>  &nbsp;
+            <input type="text" name="Publisher" [(ngModel)]='book.publisher' /></th>
+          </div>
+          <br>
+          <div class="form-group">
+          <div>
+          <th>
+            <label for="">Price</label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" name="price" [(ngModel)]='book.price' /></th>
+          </div>    <br>
+</div>
+<div><th>
+    <label for="">Category</label>  &nbsp;&nbsp;
+    <select style="position: relative;width: 100px;" (change)="dropdownselectionchange()" [(ngModel)]="selectedObject" name="demo" id="#">
+        <option selected="selected" value="Fiction">Fiction</option>
+        <option value="Comic">Comic</option>
+        <option value="Fantasy">Fantasy</option></select></th>
+  </div>
+</div>    <br>
+<div>
+    <th>
+      <label for="">Content</label>  &nbsp;&nbsp;&nbsp;
+      <input type="text" name="content" [(ngModel)]='book.content' /></th>
+    </div>    <br>
+    <div>
+        <th>
+          <label for="">Active</label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" name="active" [(ngModel)]='book.active' /></th>
+        </div>    <br>
+
+
+
+         <div class="form-group">
+            <br>
+          <th>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button>Produce</button></th>
+          </div>
+        <div>
+          <br>
+          <table class="myTable myTable-zebra myTable-horizontal">
+            <thead>
+                <th>BookName</th> 
+                <th>Price</th>
+                <th>Content</th>
+            </thead>
+            <tbody *ngFor="let book of books">
+                <tr *ngIf="book.active == true">
+                    <td>
+                      {{ book.bookName }}</td>
+                    <td>{{ book.price }}</td>
+                <td>{{book.content}}</td>
+                </tr>
+            </tbody>
+        
+        </table>
+        </div>

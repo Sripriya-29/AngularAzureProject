@@ -1,0 +1,28 @@
+<br><br><br><br><br>
+<div class="books-grid">
+    <div class="book-row">
+        <div class="book-row-details">
+            <form #form="ngForm"(ngSubmit)="onSubmit(book.bookId)" >
+            <table class="myTable myTable-zebra myTable-horizontal">
+                <thead>
+                    <th>BookName</th> &nbsp;&nbsp;
+                    <th>Price</th>
+                    <th>Read</th>
+                </thead>
+                <tbody *ngFor="let book of book">
+                    <tr *ngIf="book.active" >
+                        <td>{{ book.bookName }}</td>&nbsp;&nbsp;
+                        <td>{{ book.price }}</td>
+
+                  <td>
+                    
+                    <button (click)="onSubmit(book.bookId)">Read</button> </td>
+                   
+                </tr>
+                </tbody>
+            
+            </table>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<br><br><br>
+    <div class=" books-container">
+      <div class=" books-form">
+        <form #form="ngForm"  (ngSubmit)="onSubmit()" >
+         
+          <div class="form-group">
+           <th> <label for="">Book Name</label>&nbsp;&nbsp;
+          &nbsp;
+            <input type="text" name="BookName" [(ngModel)]='book.bookName' />
+          </th>
+          </div>
+          <br>
+          <div class="form-group">
+            <th>
+            <label for="">Author name</label>  &nbsp;
+            <input type="text" name="UserName" [(ngModel)]='user.userName'/></th>
+          </div> <br>
+          <div class="form-group">
+            <div>
+              <th>
+              <label for="">Publisher</label>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="text" name="Publisher" [(ngModel)]='book.publisher' /></th>
+            </div>
+            <br>
+            <div class="form-group">
+            <div>
+            <th>
+              <label for="">PublishedDate</label>  &nbsp;
+              <input type="date" name="PublishedDate" [(ngModel)]='book.publishedDate' /></th>
+            </div>
+</div>
+            <div class="form-group">
+             <br>
+            <th>
+              <button (onclick)="onSubmit()">Search</button></th>
+            </div>
+            <br>
+            <!-- <div class="books-grid">
+              <div class="book-row" *ngFor="let book of books">
+                <div class="book-row-details"> -->
+                  <!-- <span>{{ book.bookName }}</span>
+                  <span>{{ book.price}}</span>
+               </div> -->
+             <div class="books-grid">
+              <div class="book-row">
+                  <div class="book-row-details">
+                      <table class="myTable myTable-zebra myTable-horizontal">
+                          <thead>
+                            <th>BookId</th> 
+                              <th>BookName</th> 
+                              <th>Price</th>
+                              <th>Publisher</th>
+                              <th>PublishedDate</th>
+                      </thead>
+                      <tbody *ngFor="let book of books" >
+                          <tr>
+                            <td>{{book.bookId}}</td>
+                              <td>{{ book.bookName }}</td>
+                              <td>{{ book.price }}</td>
+                              <td>{{ book.publisher }}</td>
+                                <td>{{ book.publishedDate }}</td>
+                                <td>
+                                <a [routerLink]="['/purchase', book.bookId]"> buy </a></td>
+                              </tr>
+                          </tbody>
+                      
+                      </table>
+                  </div>
+              </div>
+            </div>
+        </div>
